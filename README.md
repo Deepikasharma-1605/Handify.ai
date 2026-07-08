@@ -167,23 +167,6 @@ Contributions are welcome!
 4. Push the branch.
 5. Open a Pull Request.
 
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
-## 👩‍💻 Author
-
-**Deepika**
-
-B.Tech CSE (Cyber Security & Digital Forensics)
-
-VIT Bhopal University
-
----
 
 ## ⭐ Support
 
