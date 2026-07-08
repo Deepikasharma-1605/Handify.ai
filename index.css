@@ -1,0 +1,211 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Cursive 2';
+  src: url('/Cursive_2.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'cursive_2';
+  src: url('/Cursive_2.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cursive 3';
+  src: url('/Cursive_3.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'cursive_3';
+  src: url('/Cursive_3.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cursive Real';
+  src: url('/Cursive_real.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'cursive_real';
+  src: url('/Cursive_real.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'GH Hughes';
+  src: url('/QEGHHughes.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'gh_hughes';
+  src: url('/QEGHHughes.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Handwritten';
+  src: url('/handwritten.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'handwritten';
+  src: url('/handwritten.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'JER';
+  src: url('/QEJER.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'jer';
+  src: url('/QEJER.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Kevin Knowles';
+  src: url('/QEKevinKnowles.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'kevin_knowles';
+  src: url('/QEKevinKnowles.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Philip Bean';
+  src: url('/QEPhilipBean.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'philip_bean';
+  src: url('/QEPhilipBean.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Royston Such CAP';
+  src: url('/QERoystonSuchCAP.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'royston_such_cap';
+  src: url('/QERoystonSuchCAP.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'cursive_real_2';
+  src: url('/QESamRoberts.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'cursive_real_3';
+  src: url('/QEScottWilliams.ttf') format('truetype');
+}
+
+@theme {
+  --font-cursive-2: "cursive_2", cursive;
+  --font-cursive-3: "cursive_3", cursive;
+  --font-cursive-real: "cursive_real", cursive;
+  --font-gh-hughes: "gh_hughes", cursive;
+  --font-handwritten: "handwritten", cursive;
+  --font-jer: "jer", cursive;
+  --font-kevin-knowles: "kevin_knowles", cursive;
+  --font-philip-bean: "philip_bean", cursive;
+  --font-royston-such-cap: "royston_such_cap", cursive;
+  --font-cursive-real-2: "cursive_real_2", cursive;
+  --font-cursive-real-3: "cursive_real_3", cursive;
+
+  /* Modern Color Palette */
+  --color-brand-50: #f0f4ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --color-brand-950: #1e1b4b;
+
+  --color-surface-50: #fafafa;
+  --color-surface-100: #f4f4f5;
+  --color-surface-200: #e4e4e7;
+  --color-surface-300: #d4d4d8;
+  --color-surface-400: #a1a1aa;
+  --color-surface-500: #71717a;
+  --color-surface-600: #52525b;
+  --color-surface-700: #3f3f46;
+  --color-surface-800: #27272a;
+  --color-surface-900: #18181b;
+  --color-surface-950: #09090b;
+}
+
+@utility no-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom scrollbar for desktop */
+@media (min-width: 641px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 0px; /* Hide horizontal scrollbar */
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-surface-200);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-surface-300);
+  }
+}
+
+/* Custom scrollbar for mobile to look like a "slider" and stay visible */
+@media (max-width: 640px) {
+  /* Force scrollbar visibility on WebKit browsers */
+  ::-webkit-scrollbar {
+    width: 14px !important; /* Thicker for easier sliding */
+    height: 14px !important;
+    display: block !important;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9 !important; /* Slate 100 */
+    border-radius: 10px !important;
+    border: 1px solid #e2e8f0 !important; /* Slate 200 */
+    margin: 4px !important;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #3b82f6 !important; /* Blue 500 */
+    border-radius: 10px !important;
+    border: 3px solid #f1f5f9 !important; /* Match track for "floating" effect */
+    min-height: 80px !important; /* Taller thumb for easier grabbing */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+  }
+  
+  ::-webkit-scrollbar-thumb:active {
+    background: #2563eb !important; /* Blue 600 */
+  }
+
+  /* Ensure scrollbar is visible on all scrollable elements */
+  * {
+    scrollbar-width: thin !important;
+    scrollbar-color: #3b82f6 #f1f5f9 !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  
+  /* Prevent OS from hiding scrollbars and ensure gutter is present */
+  html, body, main, aside, .overflow-y-auto, .overflow-y-scroll {
+    scrollbar-gutter: stable !important;
+  }
+}
+
+body {
+  @apply bg-surface-50 text-surface-900 antialiased selection:bg-brand-100 selection:text-brand-900;
+}
